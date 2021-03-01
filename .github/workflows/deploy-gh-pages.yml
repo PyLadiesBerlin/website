@@ -33,7 +33,7 @@ jobs:
           python-version: '3.8'
       - name: Install and Build
         run: |
-          pip install -r requirements.txt && pelican content
+          pip install -r requirements.txt && SITE_PREFIX=/website pelican content -s publishconf.py
           
       - name: Publish to GitHub Pages
         # You may pin to the exact commit or the version.

@@ -6,7 +6,7 @@ import os
 AUTHOR = 'PyLadies Berlin'
 SITENAME = 'PyLadies Berlin'
 SITEDESCRIPTION = 'PyLadies Berlin is a local chapter of PyLadies, an international mentorship group with a focus on helping more women become active participants and leaders in the Python open-source community.'
-SITEURL = 'https://pyladiesberlin.github.io/website'
+SITEURL = ''
 
 # plugins
 PLUGIN_PATHS = ['pelican-plugins']
@@ -38,13 +38,18 @@ I18N_SUBSITES = {
   }
 }
 
+PREFIX_URL = os.getenv('SITE_PREFIX', '')
+
+def theme_image(url):
+  return PREFIX_URL + url
+
 # logo path, needs to be stored in PATH Setting
-LOGO = '/images/logo.png'
+LOGO = theme_image('/images/logo.png')
 
 # special content
 HERO = [
   {
-    'image': '/images/hero/background-1.jpg',
+    'image': theme_image('/images/hero/background-1.jpg'),
     # for multilanguage support, create a simple dict
     'title': {
       'en':'We speak Python',
@@ -62,19 +67,19 @@ HERO = [
       }
     ]
   }, {
-    'image': '/images/hero/background-2.jpg',
+    'image': theme_image('/images/hero/background-2.jpg'),
     # keep it a string if you dont need multiple languages
     'title': 'Uh, special too',
     # keep it a string if you dont need multiple languages
     'text': 'Keep hero.text and hero.title a string if you dont need multilanguage.',
     'links': []
     }, {
-    'image': '/images/hero/background-3.jpg',
+    'image': theme_image('/images/hero/background-3.jpg'),
     'title': 'No Blogroll yet',
     'text': 'Because of space issues in the man-nav, i didnt implemented Blogroll links yet.',
     'links': []
   }, {
-    'image': '/images/hero/background-4.jpg',
+    'image': theme_image('/images/hero/background-4.jpg'),
     'title': 'Ads missing as well',
     'text': 'And since i hate any ads, this is not implemented as well',
     'links': []
@@ -89,7 +94,7 @@ SOCIAL = (
 )
 
 ABOUT = {
-  'image': '/images/about/about.jpeg',
+  'image': theme_image('/images/about/about.jpeg'),
   'mail': 'berlin@pyladies.com',
   # keep it a string if you dont need multiple languages
   'text': {
