@@ -2,7 +2,6 @@ Snowshoeing
 ###########
 
 :date: 2018-02-12 20:47
-:image: /images/blog/life/snow-tent.jpg
 :tags: snow, camping, mountain, winter
 :summary: Snowshoeing with camping
 :lang: en

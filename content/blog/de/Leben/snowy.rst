@@ -2,7 +2,6 @@ Schneeschuhlaufen
 #################
 
 :date: 2018-02-12 20:47
-:image: /images/blog/life/snow-tent.jpg
 :tags: Schnee, Zelten, Berge, Winter
 :summary: Schneeschuhlaufen mit Biwak
 :lang: de
